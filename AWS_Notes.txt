@@ -467,3 +467,165 @@ IAM
 		2) Programmatic Access
 				- Access key
 				- Secret Access key
+
+1) IAM User
+2) IAM Group  (set of users)
+3) IAM Policies (permissions for user or group)
+4) IAM Roles (service to service communication)				
+
+
+Note: IAM is a free service in AWS.
+
+
+========
+AWS RDS
+========
+
+=> Relational database service
+
+=> It is fully managed service in AWS.
+
+Ref Video : https://youtu.be/GSu1g9jvFhY?si=kla0T7i7iFXMjW6Y
+
+
+===============
+AWS Route 53
+===============
+
+Ref Video : https://www.youtube.com/watch?v=ruxNLQWtyCw
+
+
+
+==================
+Elastic Beanstack
+==================
+
+=> End to end web application management service.
+
+=> It provides platform as a service (PaaS).
+
+=> AWS will provide ready made platform to run our application when we go for Beanstack.
+
+Note: Upload your code and run your application, aws will take care of infrastructure and platform to run your application.
+
+=======================================
+Dynamic Web App - Deployment process
+=======================================
+
+1) Create Network (VPC)
+
+2) Create Security Groups
+
+3) Enable Inbound Rules
+
+4) Create EC2 Instances
+
+5) Install Required Softwares to run the code 
+
+	Ex : Java, Tomcat, IIS
+
+6) Create Load Balancer
+
+7) Setup Auto Scaling Group for High Availability
+
+8) Deploy our application code
+
+
+### Note: When we use "AWS Elastic Bean stack " services then first 7 steps will be taken by Elastic Bean stack. We are responsible for only application deployment.
+
+================================
+Elastic Beanstack Pricing Model
+================================
+
+=> There is no additional charge for Elastic Beanstalk. 
+
+=> We need to pay for the resources which are created by bean stack.
+	
+	Ex: EC2 instances, S3 buckets, LBR, ASG etc...
+
+
+================================
+Lab Task on Elastic Beanstack 
+================================
+
+Step-1) Create IAM Role with below 3 policies
+
+		- AWSElasticBeanstalkMulticontainerDocker
+		- AWSElasticBeanstalkWebTier
+		- AWSElasticBeanstalkWorkerTier
+
+	Ex : Role Name : ashokit_beanstack_role		
+
+Step-2) Create Application using Beanstack
+
+Step-3) Create Environment for the application by choosing required Runtime.
+
+	Ex: Java or Python or Dot Net
+
+Note: Once environment is created it will generate DNS to access our application.
+
+
+====================================
+Uploading Java SpringBoot Web App 
+====================================
+
+=> Take jar file of java springboot web app
+
+=> Go to Elastic Beanstack environment and upload your jar and give version number for your application
+
+	Ex: v1.0
+
+=> Go To enviornment Properties and set SERVER_PORT as 5000
+
+		Ex : SERVER_PORT = 5000	
+
+	- Select Environment
+	- Go to Configuration
+	- Edit "Updates, monitoring, and logging" option
+	- Set Environment Property	and apply	
+
+=> After environment got re-started, we can access our application by using DNS url.
+
+==============
+AWS Lambdas
+==============
+
+=> Lambdas are used for serverless computing.
+
+=> Serverless computing means Run your code without thinking about servers.
+
+Note: When we deploy our application using aws lambdas then AWs will take care of servers to run our application.
+
+=> Lambdas works based on "pay as you use" model.
+
+Note: If code is executed then only bill will be generated. If code is not executed then bill will not be generated.
+
+===============================
+Making AWS Bill amount as zero
+================================
+
+=> Go to support 
+
+=> Select Account & Billing 
+
+=> Select Consolidated Billing 
+
+=> Create Case
+
+=> Provide subject and description
+
+subject : Please waive off my bill amount
+
+description : 
+
+Hi Team,
+
+Greetings for the day..
+
+I am new to aws cloud and i am exploring aws services for learning purpose by mistake i have used some paid services. Could you please waive off my bill amount and please provide me some free credits for practice.
+
+Thankyou.
+
+=> Use chat now option 
+
+Note: AWS support team member will join for chatting.
